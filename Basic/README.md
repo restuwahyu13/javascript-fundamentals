@@ -33,7 +33,7 @@ c = 30
 const x = 10;
 
 ```
-###2.TIPE DATA
+### 2.TIPE DATA
 
 berikut adalah beberapa contoh tipe data yang boleh di gunakan pada JavaScript, tipe data tersebut termasuk dalam tipe data `Primitive `dan `Object`, dan tipe data tersebut yang nantinya akan sering sekali digunakan.
 
@@ -64,7 +64,7 @@ var func = () => { console.log('Restu Wahyu Saputra') }
 var person = { name: 'Restu Wahyu Saputra'}
 var angka = [1,2,3,4,5]
 ```
-###3.OPERATOR
+### 3.OPERATOR
 
 berikut adalah beberapa contoh operator pada JavaScript yang bisa digunakan, berikut adalah contoh pengunaanya:
 
@@ -111,7 +111,7 @@ var tesTwo = a !== 2;
 
 ` ! / NOT` : Jika sebuah bilangan itu true maka akan menjadi false dan jika sebuah bilangan itu false maka akan menjadi true
 
-###4.PERCABANGAN
+### 4.PERCABANGAN
 
 `percabangan` adalah suatu metode dimana kita dapat menentukan sebuah kondisi pada sebuah data, baik itu dalam keadaan benar ataupun salah, berikut adalah contoh beberapa jenis percabangan (pengondisian) pada JavaScript yang bisa digunakan dan berikut adalah contoh pengunaanya.
 
@@ -225,7 +225,7 @@ switch(alertbox) {
 }
 ```
 
-###4.PERULANGAN
+### 4.PERULANGAN
 
 `Perulangan` adalah suatu metode mengulang sebuah data secara berulang - ulang, sesuai dengan ketentuan yang telah ditentukan, berikut adalah contoh pengunaan perulangan pada JavaScript yang bisa digunakan dan berikut adalah contoh pengunaanya.
 
@@ -291,7 +291,7 @@ for(let i in person) {
 }
 ```
 
-###6.ARRAY
+### 6.ARRAY
 
 `Array` adalah sebuah tipe data yang biasa digunakan untuk menampung / bekerja dengan banyak data dan untuk mengelola data tersebut kita bisa mengunakan perulangan baik itu `FOR`, `WHILE` dan `DO WHILE` atau yang lainnya, berikut adalah contoh pengunaan `Array` pada JavaScript yang bisa digunakan dan berikut adalah contoh pengunaanya.
 
@@ -337,7 +337,7 @@ const person = [{
 person[0].name OR bisa mengunakan loop array iterator object untuk mengekstrak semua datanya
 ````
 
-###7.OBJECT
+### 7.OBJECT
 
 `Object` adalah sebuah tipe data yang terdiri dari antara `Key` dan `Value`, `Object` juga biasa digunakan untuk menampung / bekerja dengan banyak data dan untuk mengelola data tersebut kita bisa mengunakan `ARRAY ITERATOR OBJECT`, berikut adalah contoh pengunaan `Object` pada JavaScript yang bisa digunakan dan berikut adalah contoh pengunaanya.
 
@@ -364,7 +364,7 @@ person.age = 23; OR person['age'] = 23;
 person.fak = 'Tehnik Informatika' OR person['fak'] = 'Tehnik Informatika'
 ````
 
-###8.FUNCTION
+### 8.FUNCTION
 
 `Function` adalah sebuah metode dimana kita bisa membuat sebuah fungsi tersendiri, untuk masing - masing perintah yang telah kita tentukan contoh yang paling umum adalah ketika kita ingin membuat sebuah fungsi dari masing - masing operation pada `MySQL`, berikut adalah contoh pengunaan `Function` pada JavaScript yang bisa digunakan dan berikut adalah contoh pengunaanya.
 
