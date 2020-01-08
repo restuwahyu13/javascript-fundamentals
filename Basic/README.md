@@ -2,9 +2,7 @@
 
 ### 1.VARIABLE 
 
-berikut adalah contoh cara pengunaan variable pada JavaScript yang bisa digunakan, dan tidak boleh mengunakan kata reserved keywords contoh seperti `this`,`break`,`continue`,`if`,` for`,`while` dan lain - lain.
-
-**Contoh Pengunaan:**
+`Variable` adalah suatu metode dimana kita bisa memberikan nama pada sebuah data yang akan kita tentukan, berikut adalah contoh cara pengunaan variable pada `JavaScript` yang bisa digunakan, dan tidak boleh mengunakan kata reserved keywords contoh seperti `this`,`break`,`continue`,`if`,` for`,`while` dan lain - lain.
 
 ```javascript
 
@@ -35,7 +33,7 @@ const x = 10;
 ```
 ### 2.TIPE DATA
 
-berikut adalah beberapa contoh tipe data yang boleh di gunakan pada JavaScript, tipe data tersebut termasuk dalam tipe data `Primitive `dan `Object`, dan tipe data tersebut yang nantinya akan sering sekali digunakan.
+`Tipe Data` adalah sebuah metode yang digunakan untuk mendefinisikan sebuah nilai sesuai dengan jenis tipe datanya, berikut adalah beberapa contoh tipe data yang boleh digunakan pada `JavaScript`, tipe data tersebut termasuk dalam tipe data `Primitive `dan `Object`, dan tipe data tersebut yang nantinya akan sering sekali digunakan.
 
 **Tipe Data Primitive **
 1. `String = 'Hello Wordl'`
@@ -49,7 +47,7 @@ berikut adalah beberapa contoh tipe data yang boleh di gunakan pada JavaScript, 
 2. `Array = []`
 3. `Object = {}`
 
-**Contoh Pengunaan:**
+**TYPE DATA PRIMITIVE**
 
 ```javascript
 var name = 'Restu Wahyu Saputra';
@@ -59,6 +57,8 @@ var profile = {name: 'Restu Wahyu Saputra', age: 23}
 var benar = (profile.name === 'Restu Wahyu Saputra') ? true : false;
 ```
 
+**TYPE DATA OBJECT**
+
 ```javascript
 var func = () => { console.log('Restu Wahyu Saputra') }
 var person = { name: 'Restu Wahyu Saputra'}
@@ -66,9 +66,10 @@ var angka = [1,2,3,4,5]
 ```
 ### 3.OPERATOR
 
-berikut adalah beberapa contoh operator pada JavaScript yang bisa digunakan, berikut adalah contoh pengunaanya:
+`Operator` adalah sebuah metode yang digunakan untuk melakukan sebuah bilangan operasi tertentu pada suatu nilai, berikut adalah beberapa contoh operator pada `JavaScript` yang bisa digunakan, berikut adalah contoh pengunaanya:
 
-**Operator Aritmatika**
+**OPERATOR ARITMATIKA**
+
 ```javascript
 var a = 2 + 2; 
 var b = 4 - 2; 
@@ -78,7 +79,8 @@ var e = 10 % 2;
 var f = a++ or --a
 var g = ++a or --a
 ```
-**Operator Penugasan**
+**OPERATOR PENUGASAN**
+
 ```javascript
 var a += 5;
 var b *= 2;
@@ -86,7 +88,7 @@ var c -= 5;
 var d /= 1;
 var e %= 1;
 ```
-**Operator Perbandingan**
+**OPERATOR PERBANDINGAN**
 
 ```javascript
 var a < 6  // dimulai dari angka 5 sebelumnya (apakah A itu lebih kecil dari 6) = false
@@ -94,6 +96,7 @@ var a <= 6 // dimulai dari angka 6 (apakah A itu lebih kecil sama dengan dari 6)
 var b > 4 // dimulai dari angka 5 atau selanjutnya (apakah B itu lebih besar dari 4) = true
 var b >= 4 // dimulai dari angka 4 (apakah B itu lebih besar sama dengan dari 4) = true
 ```
+
 ```javascript
 //strict mode
 var tesOne = a === 4;
@@ -103,7 +106,7 @@ var tesTwo = a !== 2;
 var tesOne = a == 4;
 var tesTwo = a !== 2;
 ```
-**Operator Perbandingan**
+**OPERATOR LOGIKA**
 
 `&& / END` : Jika operasi  bilangan itu keduanya benar maka bernilai true dan jika salah satu bilangannya itu ada yang salah maka bernilai false
 
@@ -113,7 +116,7 @@ var tesTwo = a !== 2;
 
 ### 4.PERCABANGAN
 
-`percabangan` adalah suatu metode dimana kita dapat menentukan sebuah kondisi pada sebuah data, baik itu dalam keadaan benar ataupun salah, berikut adalah contoh beberapa jenis percabangan (pengondisian) pada JavaScript yang bisa digunakan dan berikut adalah contoh pengunaanya.
+`percabangan` adalah suatu metode yang digunakan untuk menentukan sebuah kondisi pada sebuah data, baik itu dalam keadaan benar ataupun salah, berikut adalah contoh beberapa jenis percabangan (pengondisian) pada `JavaScript` yang bisa digunakan dan berikut adalah contoh pengunaanya.
 
 **IF STATEMENT**
 
@@ -124,6 +127,8 @@ if(alertbox === 'restu') alert(true);
 else alert (false);
 ```
 ```javascript
+const alertbox = prompt('masukan nama anda ?', '');
+
 if(alertbox === 'restu') {
   
    alert(true)
@@ -227,7 +232,7 @@ switch(alertbox) {
 
 ### 4.PERULANGAN
 
-`Perulangan` adalah suatu metode mengulang sebuah data secara berulang - ulang, sesuai dengan ketentuan yang telah ditentukan, berikut adalah contoh pengunaan perulangan pada JavaScript yang bisa digunakan dan berikut adalah contoh pengunaanya.
+`Perulangan` adalah suatu metode yang digunakan untuk mengulang sebuah data secara berulang - ulang, sesuai dengan ketentuan yang telah ditentukan, berikut adalah contoh pengunaan perulangan pada `JavaScript` yang bisa digunakan dan berikut adalah contoh pengunaanya.
 
 **PERULANGAN FOR**
 
@@ -293,7 +298,7 @@ for(let i in person) {
 
 ### 6.ARRAY
 
-`Array` adalah sebuah tipe data yang biasa digunakan untuk menampung / bekerja dengan banyak data dan untuk mengelola data tersebut kita bisa mengunakan perulangan baik itu `FOR`, `WHILE` dan `DO WHILE` atau yang lainnya, berikut adalah contoh pengunaan `Array` pada JavaScript yang bisa digunakan dan berikut adalah contoh pengunaanya.
+`Array` adalah sebuah tipe data yang biasa digunakan untuk menampung / bekerja dengan banyak data dan untuk mengelola data tersebut kita bisa mengunakan perulangan baik itu `FOR`, `WHILE` dan `DO WHILE` atau yang lainnya, berikut adalah contoh pengunaan `Array` pada `JavaScript` yang bisa digunakan dan berikut adalah contoh pengunaanya.
 
 **ARRAY REGULER**
 
@@ -334,12 +339,12 @@ const person = [{
 }];
 
 //cara mencetak sebuah array object bisa mengunakan 2 cara yaitu:
-person[0].name OR bisa mengunakan loop array iterator object untuk mengekstrak semua datanya
+person[0].name atau bisa mengunakan loop array iterator object untuk mengekstrak semua datanya
 ````
 
 ### 7.OBJECT
 
-`Object` adalah sebuah tipe data yang terdiri dari antara `Key` dan `Value`, `Object` juga biasa digunakan untuk menampung / bekerja dengan banyak data dan untuk mengelola data tersebut kita bisa mengunakan `ARRAY ITERATOR OBJECT`, berikut adalah contoh pengunaan `Object` pada JavaScript yang bisa digunakan dan berikut adalah contoh pengunaanya.
+`Object` adalah sebuah tipe data yang terdiri dari antara `Key` dan `Value`, `Object` juga biasa digunakan untuk menampung / bekerja dengan banyak data dan untuk mengelola data tersebut kita bisa mengunakan `ARRAY ITERATOR OBJECT`, `Map` atau `forEach` berikut adalah contoh pengunaan `Object` pada `JavaScript` yang bisa digunakan dan berikut adalah contoh pengunaanya.
 
 **OBJECT REGULER**
 
@@ -359,14 +364,14 @@ person.name || person['name'];
 
 ```javascript
 const person = new Object;
-person.name = 'Restu Wahyu Saputra'; OR person['name']: 'Restu Wahyu Saputra'; 
-person.age = 23; OR person['age'] = 23;
+person.name = 'Restu Wahyu Saputra'; / person['name']: 'Restu Wahyu Saputra'; 
+person.age = 23; / person['age'] = 23;
 person.fak = 'Tehnik Informatika' OR person['fak'] = 'Tehnik Informatika'
 ````
 
 ### 8.FUNCTION
 
-`Function` adalah sebuah metode dimana kita bisa membuat sebuah fungsi tersendiri, untuk masing - masing perintah yang telah kita tentukan contoh yang paling umum adalah ketika kita ingin membuat sebuah fungsi dari masing - masing operation pada `MySQL`, berikut adalah contoh pengunaan `Function` pada JavaScript yang bisa digunakan dan berikut adalah contoh pengunaanya.
+`Function` adalah sebuah metode dimana kita bisa membuat sebuah fungsi tersendiri, untuk masing - masing perintah yang telah kita tentukan, contoh yang paling umum adalah ketika kita ingin membuat sebuah fungsi dari masing - masing operation pada `MySQL`, berikut adalah contoh pengunaan `Function` pada `JavaScript` yang bisa digunakan dan berikut adalah contoh pengunaanya.
 
 **REGULAR FUNCTION**
 
@@ -388,6 +393,8 @@ allDaysReg();
 **EXPRESSION FUNCTION**
 
 ```javascript
+const days = ['senin','selasa','rabu','kamis','jumat','sabtu','minggu'];
+
 const allDaysExp = function() {
 
 	 for(let i of days) {
@@ -418,6 +425,8 @@ allDaysExp();
 **ARROW FUNCTION**
 
 ```javascript
+const days = ['senin','selasa','rabu','kamis','jumat','sabtu','minggu'];
+
 const allDaysArrw = () => {
 
 	 for(let i of days) {
@@ -433,6 +442,8 @@ allDaysArrw();
 **ASYNC FUNCTION**
 
 ```javascript
+const days = ['senin','selasa','rabu','kamis','jumat','sabtu','minggu'];
+
 //(bisa mengunakan cara reguler function / exression function)
 const allDaysAsync = async () => {
 
