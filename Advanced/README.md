@@ -168,20 +168,24 @@ parsingData('Restu Wahyu Saputra', 23,(name, age)=> {
 **CALLBACK HELL (NESTED CALLBACK)**
 
 ```javascript
-function parsingData (name, age, callback) {
+function parsingData (x, callback) {
   
-  callback(name, age)
-  
-  return {
-
-     name: name,
-     age: age
-   }
+   return callback(x);
 }
 
-parsingData('Restu Wahyu Saputra', 23,(name, age)=> {
+
+parsingData(10,(x) => {
+
+  setTimeout(() => console.log(x * 1), 1000 )
   
-      console.log(name);
+  parsingData(10,(x) =>  setTimeout(() => console.log(x * 2), 2000 ));
+  
+  parsingData(10,(x) => setTimeout(() => console.log(x * 3), 3000 ));
+  
+  parsingData(10,(x) => setTimeout(() => console.log(x * 4), 4000 ));
+               
+  parsingData(10,(x) => setTimeout(() => console.log(x * 5), 5000 ));
+  
 });
 ```
 

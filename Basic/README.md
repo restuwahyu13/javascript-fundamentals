@@ -471,7 +471,7 @@ const result = new person('Restu Wahyu',23,'Tehnik Informatika');
 console.log(result);
 ```
 
-**PARSING DATA PARAMETER**
+**PARSING DATA WITH PARAMETER**
 
 ```javascript
 function parsingData (name, age) {
@@ -484,24 +484,4 @@ function parsingData (name, age) {
 
 const data = parsingData('Restu Wahyu Saputra', 23);
 console.log(data);
-```
-
-**CALLBACK FUNCTION**
-
-```javascript
-function parsingData (name, age, callback) {
-
-   callback(name, age);
-  
-    return {
-      
-       name: name,
-       age: age
-    }
-}
-
-parsingData('Restu Wahyu Saputra', 23, (name, age) => {
-  
-     console.log(`Nama: ${name} - Umur: ${age}`);
-});
 ```
