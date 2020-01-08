@@ -394,7 +394,7 @@ const hello = 'Hello Wordl';
 console.log(`Selamat Datang: ${hello}`);
 ```
 
-### 8.TEMPLATE STRING
+### 8.SPREAD OPERATOR
 
 `Spread Operator` adalah dimana sebuah metode untuk memecah sebuah bilangan `Array` atau `Array Object` menjadi bagian - bagian terkecil, berikut adalah contoh pengunaan `Spread Operator` pada `JavaScript` yang bisa digunakan dan berikut adalah contoh pengunaanya.
 
