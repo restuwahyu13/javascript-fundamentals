@@ -35,14 +35,14 @@ const x = 10;
 
 `Tipe Data` adalah sebuah metode yang digunakan untuk mendefinisikan sebuah nilai sesuai dengan jenis tipe datanya, berikut adalah beberapa contoh tipe data yang boleh digunakan pada `JavaScript`, tipe data tersebut termasuk dalam tipe data `Primitive `dan `Object`, dan tipe data tersebut yang nantinya akan sering sekali digunakan.
 
-**Tipe Data Primitive **
+**Tipe Data Primitive**
 1. `String = 'Hello Wordl'`
 2. `Number = 2020`
 3. `Boolean = true or false`
 4. `Null = 0`
 5. `Undefinded = ''`
 
-**Tipe Data Object **
+**Tipe Data Object**
 1. `Function = func()`
 2. `Array = []`
 3. `Object = {}`
