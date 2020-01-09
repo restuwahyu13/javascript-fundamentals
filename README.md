@@ -1,4 +1,4 @@
-## NOTE REVISI
+## NOTE REVISI (materi sedang disesuaikan)
 
 ## Javascript  Tutorial Basic  to advanced
 
