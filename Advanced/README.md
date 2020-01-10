@@ -232,7 +232,7 @@ jika nilai tersebut memenuhi kriteria yaitu sebagai `Array`, `Array Object` dan 
 
 * `Promise All` adalah sebuah metode yang digunakan untuk menangani sebuah tugas `Asyncronus` untuk mengembalikan sebuah nilai secara serentak, jika nilai tersebut memenuhi kriteria yaitu sebagai `Array` atau `Array Object` dan aka menolak jika nilai tersebut tidak memenuhi kriteria.
 
-* `Promise Race` adalah sebuah metode yang digunakan untuk menangani tugas `Asyncronus` untuk mengembalikan sebuah nilai yang hanya
+* `Promise Race` adalah sebuah metode yang digunakan untuk menangani sebuah tugas `Asyncronus` untuk mengembalikan sebuah nilai yang hanya
 memenuhi kriteria saja, dalam contoh kasus jika kita mempunyai sebuah 3 data masing - masing data memeliki waktu yang berbeda, maka waktu yang hanya memenuhi kriteria saja yang akan dieksekusi yaitu yang tercepat.
 
 
@@ -412,7 +412,7 @@ const dataThree = new Promise((resolve, reject) => {
 Promise.reject([dataTwo, dataThree]);
 ````
 
-**PROMISE REJECTED IN RACE OR ALL**
+**PROMISE REJECT IN RACE OR ALL**
 
 ```javascript
 //promise reject with promise race or all
