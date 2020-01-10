@@ -9,7 +9,7 @@
 ```javascript
 class Person {
   
-  name = 'Restu Wahyu Saputra';
+  name = 'John Doe';
   age = 23
   
 }
@@ -33,7 +33,7 @@ class Person {
   
 }
 
-const data = new Person('restu wahyu',23);
+const data = new Person('John Doe',23);
 console.log(data.name);
 ```
 
@@ -73,7 +73,7 @@ class Person {
   
 }
 
-const data = new Person('restu wahyu',23);
+const data = new Person('John Doe',23);
 console.log(data.resultThree().name);
 ````
 
@@ -95,7 +95,7 @@ class Person {
     }
 }
 
-const data = Person.resultData('Restu Wahyu',23);
+const data = Person.resultData('John Doe',23);
 console.log(data.name);
 ````
 
@@ -136,7 +136,7 @@ class Address extends Person {
   
 }
 
-const data = new Address('Restu','23','jl.kpbaru',14336,'depok','jawa barat');
+const data = new Address('John Doe','23','jl.kpbaru',14336,'depok','jawa barat');
 console.log(data);
 ```
 
@@ -158,7 +158,7 @@ function parsingData (name, age, callback) {
    }
 }
 
-parsingData('Restu Wahyu Saputra', 23,(name, age)=> {
+parsingData('John Doe', 23,(name, age)=> {
   
       console.log(name);
 });
@@ -207,7 +207,7 @@ new Promise((resolve, reject) => {
   }
     
   //init function dan callback dengan promise
-  parsingData('Restu Wahyu Saputra', 23);
+  parsingData('John Doe', 23);
   
 })
 .then(result => {

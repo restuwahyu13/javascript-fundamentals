@@ -2,13 +2,101 @@
 
 ### 1.VARIABLE 
 
-`Variable` adalah suatu metode dimana kita bisa memberikan nama pada sebuah nilai yang akan kita tentukan, berikut adalah contoh cara pengunaan variable pada `JavaScript` yang bisa digunakan, dan tidak boleh mengunakan kata reserved keywords contoh seperti `this`,`break`,`continue`,`if`,` for`,`while` dan lain - lain.
+`Variable` adalah sebuah metode dimana kita bisa memberikan nama pada sebuah nilai yang akan kita tentukan, berikut adalah contoh cara pengunaan variable pada `JavaScript` yang bisa digunakan, dan tidak boleh mengunakan kata reserved keywords contoh seperti `this`,`break`,`continue`,`if`,` for`,`while` dan lain - lain.
 
-`VAR`: adalah sebuah pengunaan variable yang bersifat global yang berarti bisa diakses dari mana saja
+* `VAR` adalah sebuah pengunaan variable yang bersifat global tetapi tidak bersifat readonly, yang berarti kita bisa mengakses variable dari block scope mana saja dan bisa membuat variable dengan nama yang sama, berikut adalah perbedaanya.
 
-`LET`: adalah sebuah pengunaan variable yang bersifat global tetapi tidak bisa di akses didalam scope -scope tertentu
+```javascript
+var name = 'John Doe';
+var name = 'Jane Doe';
+var age;
+age = 23;
+age = 24
 
-`CONST`: adalah sebuah pengunaan variable yang bersifat read only atau tidak bisa diubah
+function varData() {
+  
+   var fakOne = 'Tehnik Informatika';
+  
+   if(fakOne === 'Tehnik Informatika') {
+     
+       var fakTwo = 'Tehnik Informatika'
+        
+   }else{
+     
+      console.log('Tehnik Industri');
+   }
+  
+    return fakTwo;
+}
+
+var result = `Nama: ${name}\nUmur: ${age}\nFakultas: ${varData()}`;
+console.log(result);
+```
+
+* `LET` adalah sebuah pengunaan variable yang bersifat lokal, yang berarti kita hanya bisa mengakses variable tersebut dari block scope tertentu tetapi, `let` juga bersifat readonly dimana kita tidak bisa melakukan `Overloading` terhadap variable dengan nama yang sama dan hanya boleh 1 kali pengunaan, tetapi bisa menuliskan nama varibale terlebih dahulu lalu diikuti dengan nilainya, berikut adalah perbedaanya.
+
+```javascript
+// hapus duplicate nama dan umur lihat perbedaannya
+
+let name = 'John Doe';
+let name = 'Jane Doe';
+let age;
+age = 23;
+age = 24
+
+function letData() {
+  
+   let fakOne = 'Tehnik Informatika';
+  
+   if(fakOne === 'Tehnik Informatika') {
+     
+       let fakTwo = 'Tehnik Informatika'
+        
+   }else{
+     
+      console.log('Tehnik Industri');
+   }
+  
+    return fakTwo;
+}
+
+let result = `Nama: ${name}\nUmur: ${age}\nFakultas: ${letData()}`;
+console.log(result);
+```
+
+* `CONST` adalah sebuah pengunaan variable yang bersifat lokal, yang berarti kita hanya bisa mengakses variable tersebut dari block scope tertentu `const` juga bersifat readonly dimana kita tidak bisa melakukan `Overloading` terhadap variable dengan nama yang sama dan hanya boleh 1 kali pengunaan, berikut adalah perbedaanya.
+
+```javascript
+// hapus duplicate nama dan umur lihat perbedaannya
+
+const name = 'John Doe';
+const name = 'Jane Doe';
+const age;
+age = 23;
+age = 24
+
+function letData() {
+  
+   const fakOne = 'Tehnik Informatika';
+  
+   if(fakOne === 'Tehnik Informatika') {
+     
+       const fakTwo = 'Tehnik Informatika'
+        
+   }else{
+     
+      console.log('Tehnik Industri');
+   }
+  
+    return fakTwo;
+}
+
+const result = `Nama: ${name}\nUmur: ${age}\nFakultas: ${letData()}`;
+console.log(result);
+```
+
+##### PENULISAN VARIABLE:
+
 
 ```javascript
 var x = 10;
@@ -35,6 +123,20 @@ c = 30
 ```javascript
 const x = 10;
 ```
+
+##### PENULISAN NAMA VARIBALE
+
+```javascript
+// berikut adalah contoh penamaan nama variable yang benar
+
+var first_name = 'John Doe'
+var firstName = 'John Doe'
+
+// berikut adalah contoh penamaan nama variable yang salah
+var first name = 'John Doe'
+var 123Name = 'Joh Doe'
+````
+
 ### 2.TIPE DATA
 
 `Tipe Data` adalah sebuah metode yang digunakan untuk mendefinisikan sebuah nilai sesuai dengan jenis tipe datanya, berikut adalah beberapa contoh tipe data yang boleh digunakan pada `JavaScript`, tipe data tersebut termasuk dalam tipe data `Primitive `dan `Object`, dan tipe data tersebut yang nantinya akan sering sekali digunakan.
