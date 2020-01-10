@@ -492,3 +492,122 @@ export {HelloWordl as dunia1, HelloWord2 as dunia2, HelloWord3 as dunia3};
 ```javascript
 export default HelloWord;
 ```
+
+### 10.HTPP REQUEST
+
+`Http Request` adalah sebuah metode yang digunakan untuk berkomunikasi antara client dan server untuk melakukan pertukaran data, 
+berikut adalah contoh pengunaan `Http Request` pada `JavaScript` yang bisa digunakan dan berikut adalah contoh pengunaanya.
+
+**REGULER HTTP REQUEST**
+
+```javascript
+// cara ke satu 
+const ajax = new XMLHttpRequest;
+
+ajax.onreadystatechange = () => {
+  
+    if(ajax.readyState === 4 && ajax.status === 200) {
+      
+        const jsonData = JSON.parse(ajax.response);
+        const result = jsonData;
+        console.log(result);
+    }
+}
+
+const url = 'https://jsonplaceholder.typicode.com/users';
+ajax.open('GET', url, true);
+ajax.send();
+
+
+// cara ke dua
+const headers = new Headers({
+  
+    method: 'GET',
+    url: 'https://jsonplaceholder.typicode.com/users'
+});
+
+ajax.onreadystatechange = () => {
+  
+    if(ajax.readyState === 4 && ajax.status === 200) {
+      
+        const jsonData = JSON.parse(ajax.response);
+        const result = jsonData;
+        console.log(result);
+    }
+  
+};
+
+ajax.open(headers.get('method'), headers.get('url'));
+ajax.send();
+```
+
+**PROMOISE HTTP REQUEST**
+
+```javascript
+const url = 'https://jsonplaceholder.typicode.com/users'
+fetch(url, {
+  
+    method: 'GET',
+    type: 'cors',
+})
+.then(response => response.json())
+.then(result => console.log(result))
+.catch(err => console.log(err));
+
+```
+
+**JQUERY HTTP REQUEST**
+
+```javascript
+$(() => {
+    
+    $.ajax({
+    
+       url: 'https://jsonplaceholder.typicode.com/users',
+       method: 'GET',
+       contentType: 'json',
+       success: ((response) => {
+         
+          console.log(response);
+       })
+    });
+
+ });
+```
+
+### 11.ERROR HANDLING
+
+`Error Handling` adalah sebuah metode yang biasa digunakan untuk menangkap sebuah error dari nilai yang kita tentukan, yang paling umum error handling digunakan ketika kita ingin melakukan request data mengunakan HTTP Request untuk menangkap sebuah error, berikut adalah contoh pengunaan `Erro Handling` pada `JavaScript` yang bisa digunakan dan berikut adalah contoh pengunaanya.
+
+`Try`: adalah sebuah method yang biasa digunakan untuk menangkap sebuah pesan error dari sebuah nilai yang kita tentukan.
+
+`Catch`: adalah sebuah method yang biasa digunakan untuk menerima pesan error yang dikirim dari block try.
+
+`Throw`: adalah sebuah method yang biasa digunakan untuk melempar sebuah pesan error dan pesannya bisa kita custom sesuai kengininan.
+
+`Finally` adalah sebuah method yang biasa digunakan untuk memberi sebuah pesan akhir bawah sebuah nilai telah berhasil di eksekusi baik itu true atau false.
+
+```javascript
+try {
+  
+  const alertBox = prompt('Masukan Angka sesuka anda ?', '');
+    
+    if(alertBox < 20) {
+    
+      throw 'Terlalu Kecil'
+
+    } else {
+    
+        console.log('Terlalu Besar');
+    }
+
+} catch(err) {
+ 
+   const error = new Error(err);
+   console.log(error);
+
+} finally {
+
+   console.log('data berhasil di eksekusi');  
+}
+```

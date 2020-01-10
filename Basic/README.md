@@ -2,12 +2,15 @@
 
 ### 1.VARIABLE 
 
-`Variable` adalah suatu metode dimana kita bisa memberikan nama pada sebuah data yang akan kita tentukan, berikut adalah contoh cara pengunaan variable pada `JavaScript` yang bisa digunakan, dan tidak boleh mengunakan kata reserved keywords contoh seperti `this`,`break`,`continue`,`if`,` for`,`while` dan lain - lain.
+`Variable` adalah suatu metode dimana kita bisa memberikan nama pada sebuah nilai yang akan kita tentukan, berikut adalah contoh cara pengunaan variable pada `JavaScript` yang bisa digunakan, dan tidak boleh mengunakan kata reserved keywords contoh seperti `this`,`break`,`continue`,`if`,` for`,`while` dan lain - lain.
+
+`VAR`: adalah sebuah pengunaan variable yang bersifat global yang berarti bisa diakses dari mana saja
+
+`LET`: adalah sebuah pengunaan variable yang bersifat global tetapi tidak bisa di akses didalam scope -scope tertentu
+
+`CONST`: adalah sebuah pengunaan variable yang bersifat read only atau tidak bisa diubah
 
 ```javascript
-
-//var sebuah pengunaan variable yang bersifat global yang berarti bisa diakses dari mana saja
-
 var x = 10;
 var z;
 z = 10;
@@ -15,9 +18,10 @@ var a,b,c;
 a = 10;
 b = 20;
 c = 30
+```
+**LET**
 
-//let sebuah pengunaan variable yang bersifat global tetapi tidak bisa di akses didalam scope -scope tertentu
-
+```javascript
 let x = 10;
 let z;
 z = 10;
@@ -25,11 +29,11 @@ let a,b,c;
 a = 10;
 b = 20;
 c = 30
+```
+**CONST**
 
-//const sebuah pengunaan variable yang bersifat read only atau tidak bisa diubah
-
+```javascript
 const x = 10;
-
 ```
 ### 2.TIPE DATA
 
@@ -50,18 +54,18 @@ const x = 10;
 **TYPE DATA PRIMITIVE**
 
 ```javascript
-var name = 'Restu Wahyu Saputra';
+var name = 'john doe';
 var age = 23
 var person = [1,2,3,4,5];
-var profile = {name: 'Restu Wahyu Saputra', age: 23}
-var benar = (profile.name === 'Restu Wahyu Saputra') ? true : false;
+var profile = {name: 'john doe', age: 23}
+var benar = (profile.name === 'john doe') ? true : false;
 ```
 
 **TYPE DATA OBJECT**
 
 ```javascript
-var func = () => { console.log('Restu Wahyu Saputra') }
-var person = { name: 'Restu Wahyu Saputra'}
+var func = () => { console.log('john doe') }
+var person = { name: 'john doe'}
 var angka = [1,2,3,4,5]
 ```
 ### 3.OPERATOR
@@ -82,6 +86,12 @@ var g = ++a or --a
 **OPERATOR PENUGASAN**
 
 ```javascript
+var a = 4;
+var b = 2; 
+var c = 25; 
+var d = 5; 
+var e = 0; 
+
 var a += 5;
 var b *= 2;
 var c -= 5;
@@ -91,6 +101,12 @@ var e %= 1;
 **OPERATOR PERBANDINGAN**
 
 ```javascript
+var a = 9;
+var b = 4; 
+var c = 20; 
+var d = 1; 
+var e = 0;
+
 var a < 6  // dimulai dari angka 5 sebelumnya (apakah A itu lebih kecil dari 6) = false
 var a <= 6 // dimulai dari angka 6 (apakah A itu lebih kecil sama dengan dari 6) = false
 var b > 4 // dimulai dari angka 5 atau selanjutnya (apakah B itu lebih besar dari 4) = true
@@ -98,38 +114,54 @@ var b >= 4 // dimulai dari angka 4 (apakah B itu lebih besar sama dengan dari 4)
 ```
 
 ```javascript
+var a = 4;
+var b = 8
 //strict mode
 var tesOne = a === 4;
 var tesTwo = a !== 2;
 
 //non strict mode
-var tesOne = a == 4;
-var tesTwo = a !== 2;
+var tesOne = a == 8;
+var tesTwo = a != 8;
 ```
 **OPERATOR LOGIKA**
 
-`&& / END` : Jika operasi  bilangan itu keduanya benar maka bernilai true dan jika salah satu bilangannya itu ada yang salah maka bernilai false
+`&& / END` : Jika operasi bilangan itu keduanya benar maka bernilai true dan jika salah satu bilangannya itu ada yang salah maka bernilai false
 
 `|| / OR`: Jika operasi bilangan itu keduanya true maka bernilai true dan jika salah satu bilangannya itu ada yang salah maka bernilai true
 
 ` ! / NOT` : Jika sebuah bilangan itu true maka akan menjadi false dan jika sebuah bilangan itu false maka akan menjadi true
 
+```javascript
+const a = 50;
+const b = 20;
+const c = a && b <= 100;
+
+const a = 20;
+const b = 1;
+const c = a > 10 || b > 10;
+
+const a = 10 * 10;
+const b = !a === 100;
+````
+
 ### 4.PERCABANGAN
 
-`percabangan` adalah suatu metode yang digunakan untuk menentukan sebuah kondisi pada sebuah data, baik itu dalam keadaan benar ataupun salah, berikut adalah contoh beberapa jenis percabangan (pengondisian) pada `JavaScript` yang bisa digunakan dan berikut adalah contoh pengunaanya.
+`percabangan` adalah suatu metode yang digunakan untuk menentukan sebuah kondisi pada sebuah nilai, baik itu dalam keadaan benar ataupun salah, berikut adalah contoh beberapa jenis percabangan (pengondisian) pada `JavaScript` yang bisa digunakan dan berikut adalah contoh pengunaanya.
 
 **IF STATEMENT**
 
 ```javascript
 const alertbox = prompt('masukan nama anda ?', '');
 
-if(alertbox === 'restu') alert(true);
+if(alertbox === 'john') alert(true);
+
 else alert (false);
 ```
 ```javascript
 const alertbox = prompt('masukan nama anda ?', '');
 
-if(alertbox === 'restu') {
+if(alertbox === 'john') {
   
    alert(true)
    
@@ -143,11 +175,11 @@ if(alertbox === 'restu') {
 ```javascript
 const alertbox = prompt('masukan nama anda ?', '');
 
-if(alertbox === 'restu') {
+if(alertbox === 'john') {
   
    alert(true)
   
-}else if(alertbox === 'wahyu') {
+}else if(alertbox === 'doe') {
   
    alert(true);
   
@@ -164,15 +196,15 @@ const alertbox = prompt('masukan nama anda ?', '');
 
 switch(alertbox) {
     
-  case 'restu':
+  case 'john doe':
     alert(true);
     break;
     
-  case 'wahyu':
+  case 'jane doe':
     alert(true);
     break;
 	
-  case 'saputra':
+  case 'mr x':
     alert(true);
     break;
     
@@ -186,19 +218,19 @@ switch(alertbox) {
 ```javascript
 const alertbox = prompt('masukan nama anda ?', '');
 
-if(alertbox === 'restu') {
+if(alertbox === 'john doe') {
   
     alert(true);
      
 }else{
   
-   if(alertbox == 'wahyu') {
+   if(alertbox == 'mr x') {
      
        alert(true); 
      
    }else{
      
-      if(alertbox === 'saputra') {
+      if(alertbox === 'jane doe') {
         
         alert (true);
         
@@ -217,9 +249,9 @@ const alertbox = prompt('masukan nama anda ?', '');
 
 switch(alertbox) {
     
-  case 'restu':
-  case 'wahyu':
-  case 'saputra':
+  case 'john doe':
+  case 'jane doe':
+  case 'mr x':
     
     alert(true);
     break;
@@ -232,7 +264,7 @@ switch(alertbox) {
 
 ### 4.PERULANGAN
 
-`Perulangan` adalah suatu metode yang digunakan untuk mengulang sebuah data secara berulang - ulang, sesuai dengan ketentuan yang telah ditentukan, berikut adalah contoh pengunaan perulangan pada `JavaScript` yang bisa digunakan dan berikut adalah contoh pengunaanya.
+`Perulangan` adalah suatu metode yang digunakan untuk mengulang sebuah nilai secara berulang - ulang, sesuai dengan ketentuan yang telah ditentukan, berikut adalah contoh pengunaan perulangan pada `JavaScript` yang bisa digunakan dan berikut adalah contoh pengunaanya.
 
 **PERULANGAN FOR**
 
@@ -282,13 +314,12 @@ for(let i of days) {
   
    console.log(i);
 }
-
 ```
 
 **PERULANGAN ARRAY ITERATOR OBJECT**
 
 ```javascript
-const person = [{name: 'restu', fak: 'tehnik informatika'}, { name: 'bagus budiawan', fak: 'sastra inggris' }]
+const person = [{name: 'john', fak: 'tehnik informatika'}, { name: 'jane', fak: 'sastra inggris' }]
 
 for(let i in person) {
   
@@ -298,7 +329,7 @@ for(let i in person) {
 
 ### 6.ARRAY
 
-`Array` adalah sebuah tipe data yang biasa digunakan untuk menampung / bekerja dengan banyak data dan untuk mengelola data tersebut kita bisa mengunakan perulangan baik itu `FOR`, `WHILE` dan `DO WHILE` atau yang lainnya, berikut adalah contoh pengunaan `Array` pada `JavaScript` yang bisa digunakan dan berikut adalah contoh pengunaanya.
+`Array` adalah sebuah tipe data yang biasa digunakan untuk menampung / bekerja dengan banyak nilai dan untuk mengelola nilai tersebut kita bisa mengunakan perulangan baik itu `FOR`, `WHILE` dan `DO WHILE` atau yang lainnya, berikut adalah contoh pengunaan `Array` pada `JavaScript` yang bisa digunakan dan berikut adalah contoh pengunaanya.
 
 **ARRAY REGULER**
 
@@ -319,6 +350,9 @@ days[0][1];
 **ARRAY OBJECT**
 
 ```javascript
+// cara mencetak sebuah array object bisa mengunakan 2 cara yaitu:
+// person[0].name atau bisa mengunakan loop array iterator object untuk mengekstrak semua nilainya
+
 const person = [{
 
 	name: 'Restu Wahyu Saputra',
@@ -337,9 +371,6 @@ const person = [{
 	age: 35,
 	fak: 'Tehnik Informatika'
 }];
-
-//cara mencetak sebuah array object bisa mengunakan 2 cara yaitu:
-person[0].name atau bisa mengunakan loop array iterator object untuk mengekstrak semua datanya
 ````
 
 ### 7.OBJECT
@@ -349,29 +380,111 @@ person[0].name atau bisa mengunakan loop array iterator object untuk mengekstrak
 **OBJECT REGULER**
 
 ```javascript
+// cara mencetak sebuah object bisa mengunakan 2 cara yaitu:
+
 const person = {
 
-	name: 'Restu Wahyu Saputra',
+	name: 'Jonh Doe',
 	age: 23,
 	fak: 'Tehnik Informatika'
 }
 
-//cara mencetak sebuah object bisa mengunakan 2 cara yaitu:
-person.name || person['name'];
+person.name  
+person['name'];
 ```
 
 ***OBJECT CONSTRUCTOR***
 
 ```javascript
 const person = new Object;
-person.name = 'Restu Wahyu Saputra'; / person['name']: 'Restu Wahyu Saputra'; 
-person.age = 23; / person['age'] = 23;
-person.fak = 'Tehnik Informatika' OR person['fak'] = 'Tehnik Informatika'
+
+person.name = 'John doe'; 
+person.age = 23;
+person.fak = 'Tehnik Informatika';
+
+person['name']: 'John Doe'; 
+person['age'] = 23;
+person['fak'] = 'Tehnik Informatika'
+````
+
+**OBJECT SPECIAL METHOD**
+
+`Object Create`: adalah sebuah method yang biasa digunakan untuk membuat sebuah Object baru dari Object yang sudah ada.
+
+`Object Keys`: adalah sebuah method yang biasa digunakan untuk mengambil keys dari Object yang sudah ada.
+
+`Object Values`: adalah sebuah method yang biasa digunakan untuk mengambil sebuah value dari Object yang sudah ada.
+
+`Object Entries`: adalah sebuah method yang biasa digunakan untuk membuat sebuah keys dan value menjadi sebuah nilai Array
+
+**OBJECT CREATE**
+
+```javascript
+const person = {
+
+  name: 'Jonh Doe',
+  age: 23,
+  fak: 'Tehnik Informatika'
+}
+
+console.log(person);
+
+const newObject = Object.create(person);
+newObject.name = 'Adung';
+newObject.age = 25;
+newObject.fak = 'Tehnik Elektro';
+newObject.state = 'Jakarta';
+newObject.country = 'Indonesia';
+
+const result = newObject;
+console.log(result);
+````
+
+**OBJECT KEYS**
+
+```javascript
+const person = {
+
+  name: 'Jonh Doe',
+  age: 23,
+  fak: 'Tehnik Informatika'
+}
+
+const result = Object.keys(person);
+console.log(result);
+````
+
+**OBJECT VALUES**
+
+```javascript
+const person = {
+
+  name: 'Jonh Doe',
+  age: 23,
+  fak: 'Tehnik Informatika'
+}
+
+const result = Object.values(person)
+console.log(result);
+````
+
+**OBJECT ENTRIES**
+
+```javascript
+const person = {
+
+  name: 'Jonh Doe',
+  age: 23,
+  fak: 'Tehnik Informatika'
+}
+
+
+console.log(Object.entries(person));
 ````
 
 ### 8.FUNCTION
 
-`Function` adalah sebuah metode dimana kita bisa membuat sebuah fungsi tersendiri, untuk masing - masing perintah yang telah kita tentukan, contoh yang paling umum adalah ketika kita ingin membuat sebuah fungsi dari masing - masing operation pada `MySQL`, berikut adalah contoh pengunaan `Function` pada `JavaScript` yang bisa digunakan dan berikut adalah contoh pengunaanya.
+`Function` adalah sebuah metode dimana kita bisa membuat sebuah fungsi tersendiri, untuk masing - masing perintah yang telah kita tentukan, contoh yang paling umum adalah ketika kita ingin membuat sebuah fungsi dari masing - masing operasi pada `MySQL`, berikut adalah contoh pengunaan `Function` pada `JavaScript` yang bisa digunakan dan berikut adalah contoh pengunaanya.
 
 **REGULAR FUNCTION**
 
@@ -467,7 +580,7 @@ function person(name, age, fak) {
    this.fak = fak;
 }
 
-const result = new person('Restu Wahyu',23,'Tehnik Informatika');
+const result = new person('John Doe',23,'Tehnik Informatika');
 console.log(result);
 ```
 
@@ -482,6 +595,96 @@ function parsingData (name, age) {
    }
 }
 
-const data = parsingData('Restu Wahyu Saputra', 23);
-console.log(data);
+const result = parsingData('Jon Doe', 23);
+console.log(result);
+```
+
+**PARSING DATA WITH ARROW FUNCTION**
+```javascript
+// cara kesatu
+const person = name => console.log(name);
+person('Johh Doe');
+
+
+//cara kedua
+const person = (name, age) => console.log(`nama: ${name} dan umur: ${age}`);
+person('Jon Doe', 23);
+
+//cara ketiga
+const person = (name, age, fak) => {
+
+    console.log(`nama: ${name}\numur: ${age}\nfakultas: ${fak}`);
+}
+````
+
+**FUNCTION SPECIAL METHOD**
+
+`Call`: adalah sebuah method yang biasa digunakan untuk mengambil sebuah function dari function lain.
+
+`Apply`: adalah sebuah method yang biasa digunakan untuk bekerja dengan sebuah nilai Array.
+
+`Bind`: adalah sebuah method yang biasa digunakan untuk mengikat sebuah nilai dari nilai yang sudah ditentukan.
+
+**CALL**
+
+```javascript
+function tabungan (bank, saldo) {
+  
+     return {
+
+      bankName: bank,
+      sisalSaldo: saldo
+   }
+}
+
+
+function atm() {
+  
+  const pinNumber = prompt('masukan pin anda', '');
+        
+  if (pinNumber) {
+  
+  const tarikTunai = prompt('Berapa jumlah uang yang mau anda tarik ?', '');
+  
+      return {
+    
+       tarikTunai: tabungan.call(null, 'BCA', 13000000 -  tarikTunai)
+      }
+  }
+  
+}
+console.log(atm());
+```
+
+**APPLY**
+
+```javascript
+function days(...args) {
+  
+    for(let i of args) {
+      
+      console.log(i);
+    }
+}
+
+days.apply(null, ['senin','selasa','rabu','kamis','jumat','sabtu','minggu']);
+```
+
+**BIND**
+
+```javascript
+function days(name, age) {
+  
+     return {
+       
+        name: name,
+        age: age
+     }
+}
+
+const setData = days();
+const getData = days.bind(setData);
+const resultData = getData('John Doe', 23)
+
+console.log(resultData);
 ```
