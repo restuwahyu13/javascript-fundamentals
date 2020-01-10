@@ -198,11 +198,11 @@ var c = 25;
 var d = 5; 
 var e = 0; 
 
-var a += 5;
-var b *= 2;
-var c -= 5;
-var d /= 1;
-var e %= 1;
+a += 5;
+b *= 2;
+c -= 5;
+d /= 1;
+e %= 1;
 ```
 **OPERATOR PERBANDINGAN**
 
@@ -213,15 +213,16 @@ var c = 20;
 var d = 1; 
 var e = 0;
 
-var a < 6  // dimulai dari angka 5 sebelumnya (apakah A itu lebih kecil dari 6) = false
-var a <= 6 // dimulai dari angka 6 (apakah A itu lebih kecil sama dengan dari 6) = false
-var b > 4 // dimulai dari angka 5 atau selanjutnya (apakah B itu lebih besar dari 4) = true
-var b >= 4 // dimulai dari angka 4 (apakah B itu lebih besar sama dengan dari 4) = true
+a < 6  // dimulai dari angka 5 sebelumnya (apakah A itu lebih kecil dari 6) = false
+a <= 6 // dimulai dari angka 6 (apakah A itu lebih kecil sama dengan dari 6) = false
+b > 4 // dimulai dari angka 5 atau selanjutnya (apakah B itu lebih besar dari 4) = true
+b >= 4 // dimulai dari angka 4 (apakah B itu lebih besar sama dengan dari 4) = true
 ```
 
 ```javascript
 var a = 4;
 var b = 8
+
 //strict mode one
 var tesOne = a === 4;
 var tesTwo = a !== 2;
@@ -236,11 +237,11 @@ var tesTwo = a != 8;
 ```
 **OPERATOR LOGIKA**
 
-* `&& / END` : Jika operasi bilangan itu keduanya benar maka bernilai true dan jika salah satu bilangannya itu ada yang salah maka bernilai false
+* `&& / END` : Jika operasi bilangan itu keduanya benar maka bernilai true dan jika salah satu bilangan nya itu ada yang salah maka bernilai false
 
-* `|| / OR`: Jika operasi bilangan itu keduanya true maka bernilai true dan jika salah satu bilangannya itu ada yang salah maka bernilai true
+* `|| / OR`: Jika operasi bilangan itu keduanya true maka bernilai true dan jika salah satu bilangan nya itu ada yang salah maka bernilai true
 
-* ` ! / NOT` : Jika sebuah bilangan itu true maka akan menjadi false dan jika sebuah bilangan itu false maka akan menjadi true
+* ` ! / NOT` : Jika sebuah bilangan itu true maka akan menjadi false dan jika sebuah bilangan nya itu false maka akan menjadi true
 
 ```javascript
 const a = 50;
@@ -268,6 +269,7 @@ if(alertbox === 'john') alert(true);
 
 else alert (false);
 ```
+
 ```javascript
 const alertbox = prompt('masukan nama anda ?', '');
 
@@ -280,6 +282,7 @@ if(alertbox === 'john') {
    alert(false)
 }
 ```
+
 **IF ELSE STATEMENT**
 
 ```javascript
@@ -520,15 +523,15 @@ person['fak'] = 'Tehnik Informatika'
 
 **OBJECT SPECIAL METHOD**
 
-* `Object Assign`: adalah sebuah method yang biasa digunakan untuk menambahkan sebuah Object baru dari Object yang sudah ada.
+* `Object Assign` adalah sebuah method yang biasa digunakan untuk menambahkan sebuah nilai baru dari `Object` yang sudah ada.
 
-* `Object Create`: adalah sebuah method yang biasa digunakan untuk membuat sebuah Object baru dari Object yang sudah ada.
+* `Object Create` adalah sebuah method yang biasa digunakan untuk membuat sebuah `Object` baru dari `Object` yang sudah ada.
 
-* `Object Keys`: adalah sebuah method yang biasa digunakan untuk mengambil semua keys dari Object yang sudah ada.
+* `Object Keys` adalah sebuah method yang biasa digunakan untuk mengambil semua keys dari `Object` yang sudah ada.
 
-* `Object Values`: adalah sebuah method yang biasa digunakan untuk mengambil semua value dari Object yang sudah ada.
+* `Object Values` adalah sebuah method yang biasa digunakan untuk mengambil semua value dari Object yang sudah ada.
 
-* `Object Entries`: adalah sebuah method yang biasa digunakan untuk membuat sebuah keys dan value menjadi sebuah nilai Array
+* `Object Entries` adalah sebuah method yang biasa digunakan untuk membuat sebuah keys dan value menjadi sebuah nilai `Array`
 
 
 **OBJECT ASSIGN**
@@ -745,11 +748,11 @@ const person = name => console.log(name);
 person('Johh Doe');
 
 
-//cara kedua
+// cara kedua
 const person = (name, age) => console.log(`nama: ${name} dan umur: ${age}`);
 person('Jon Doe', 23);
 
-//cara ketiga
+// cara ketiga
 const person = (name, age, fak) => {
 
     console.log(`nama: ${name}\numur: ${age}\nfakultas: ${fak}`);
@@ -758,11 +761,11 @@ const person = (name, age, fak) => {
 
 **FUNCTION SPECIAL METHOD**
 
-* `Call`: adalah sebuah method yang biasa digunakan untuk mengambil sebuah function dari function lain.
+* `Call` adalah sebuah method yang biasa digunakan untuk mengambil sebuah function dari function lain.
 
-* `Apply`: adalah sebuah method yang biasa digunakan untuk bekerja dengan sebuah nilai `Array`.
+* `Apply` adalah sebuah method yang biasa digunakan untuk bekerja dengan sebuah nilai `Array`.
 
-* `Bind`: adalah sebuah method yang biasa digunakan untuk mengikat sebuah nilai dari nilai yang sudah ditentukan.
+* `Bind` adalah sebuah method yang biasa digunakan untuk mengikat sebuah nilai dari nilai yang sudah ditentukan.
 
 **CALL**
 

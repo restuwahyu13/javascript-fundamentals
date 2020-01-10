@@ -2,7 +2,7 @@
 
 ### 1.CLASS
 
-`Class` disebut juga sebagai `Blue Print` atau `Parent Class` dimana sebuah metode yang digunakan untuk menciptakan suatu instant dari object itu sendiri dan `Class` juga merupakan grup dari suatu object dengan kemiripan attributes/properties, method dan bisa berelasi ke object turunannya, berikut adalah contoh pengunaan `Class` pada `JavaScript` yang bisa digunakan dan berikut adalah contoh pengunaanya.
+`Class` disebut juga sebagai `Blue Print` atau `Parent Class` dimana sebuah metode yang digunakan untuk menciptakan suatu instant dari object itu sendiri dan `Class` juga merupakan grup dari suatu object dengan kemiripan `Attributes` / `Properties`, method dan bisa berelasi ke object turunannya, berikut adalah contoh pengunaan `Class` pada `JavaScript` yang bisa digunakan dan berikut adalah contoh pengunaanya.
 
 **CLASS NOT CONSTRUCTOR**
 
@@ -20,7 +20,6 @@ console.log(Person.name);
 **CLASS WITH CONSTRUCTOR**
 
 ```javascript
-//Class Dengan Constructor
 class Person {
   
   name;
@@ -147,7 +146,7 @@ console.log(data);
 
 ### 3.CALLBACK
 
-`Callback` adalah sebuah metode untuk melakukan sebuah panggilan balik dari sebuah `Function`, berikut adalah contoh pengunaan `Callback` pada `JavaScript` yang bisa digunakan dan berikut adalah contoh pengunaanya.
+`Callback` adalah sebuah metode yang digunakan untuk melakukan sebuah panggilan balik dari sebuah `Function`, berikut adalah contoh pengunaan `Callback` pada `JavaScript` yang bisa digunakan dan berikut adalah contoh pengunaanya.
 
 **REGULER CALLBACK**
 
@@ -227,14 +226,14 @@ new Promise((resolve, reject) => {
 **PROMISE SPECIAL METHOD**
 
 * `Promise Resolve` adalah sebuah metode yang digunakan untuk menangani sebuah tugas `Asyncronus` untuk mengembalikan sebuah nilai
-jika nilai tersebut memenuhi keriteria yaitu sebagai `Array`, `Array Object` dan `Object` akan menolak jika nilai tersebut tidak memenuhi keriteria.
+jika nilai tersebut memenuhi kriteria yaitu sebagai `Array`, `Array Object` dan `Object` akan menolak jika nilai tersebut tidak memenuhi kriteria.
 
 * `Promise Reject` adalah sebuah metode yang digunakan untuk menghentikan sebuah tugas dalam bentuk `Asyncronus` dengan sebuah pesan yang diberikan.
 
-* `Promise All` adalah sebuah metode yang digunakan untuk menangani sebuah tugas `Asyncronus` untuk mengembalikan sebuah nilai secara serentak, jika nilai tersebut memenuhi keriteria yaitu sebagai `Array` atau `Array Object` dan aka menolak jika nilai tersebut tidak memenuhi keriteria.
+* `Promise All` adalah sebuah metode yang digunakan untuk menangani sebuah tugas `Asyncronus` untuk mengembalikan sebuah nilai secara serentak, jika nilai tersebut memenuhi kriteria yaitu sebagai `Array` atau `Array Object` dan aka menolak jika nilai tersebut tidak memenuhi kriteria.
 
 * `Promise Race` adalah sebuah metode yang digunakan untuk menangani tugas `Asyncronus` untuk mengembalikan sebuah nilai yang hanya
-memenuhi keriteria saja, dalam contoh kasus jika kita mempunyai sebuah 3 data masing - masing data memeliki waktu yang berbeda, maka waktu yang hanya memenuhi keriteria saja yang akan dieksekusi yaitu yang tercepat.
+memenuhi kriteria saja, dalam contoh kasus jika kita mempunyai sebuah 3 data masing - masing data memeliki waktu yang berbeda, maka waktu yang hanya memenuhi kriteria saja yang akan dieksekusi yaitu yang tercepat.
 
 
 **SINGLE PROMISE RESOLVE**
@@ -360,7 +359,7 @@ Promise.resolve([dataOne, dataTwo, dataThree])
 });
 ````
 
-**SINGLE PROMISE REJECTED**
+**SINGLE PROMISE REJECT**
 
 ```javascript
 //single promise reject
@@ -380,7 +379,7 @@ const person = new Promise((resolve, reject) => {
 Promise.reject(person);
 ````
 
-**MULTIPLE PROMISE REJECTED**
+**MULTIPLE PROMISE REJECT**
 
 ```javascript
 //multipe promise reject
@@ -819,6 +818,7 @@ const person = {
    kota: 'Depok',
    prov: 'Jawa Barat'
 }
+
 const result = `Nama Saya: ${person.name}\n Umur Saya: ${person.age}\n Alamat: ${person.alamat}\n Kota: ${person.kota}\n Provinsi ${person.prov}`;
 
 console.log(result);
@@ -956,7 +956,7 @@ berikut adalah contoh pengunaan `Http Request` pada `JavaScript` yang bisa digun
 **REGULER HTTP REQUEST**
 
 ```javascript
-// cara kesatu 
+// http request cara kesatu 
 const ajax = new XMLHttpRequest;
 
 ajax.onreadystatechange = () => {
@@ -974,7 +974,7 @@ ajax.open('GET', url, true);
 ajax.send();
 
 
-// cara kedua
+// http request cara kedua
 const headers = new Headers({
   
     method: 'GET',
@@ -1032,13 +1032,13 @@ $(() => {
 
 ### 11.ERROR HANDLING
 
-`Error Handling` adalah sebuah metode yang biasa digunakan untuk menangkap sebuah error dari nilai yang kita tentukan, yang paling umum error handling digunakan ketika kita ingin melakukan request data mengunakan HTTP Request untuk menangkap sebuah error, berikut adalah contoh pengunaan `Erro Handling` pada `JavaScript` yang bisa digunakan dan berikut adalah contoh pengunaanya.
+`Error Handling` adalah sebuah metode yang digunakan untuk menangkap sebuah error dari nilai yang kita tentukan, yang paling umum error handling digunakan ketika kita ingin melakukan request data mengunakan HTTP Request untuk menangkap sebuah error, berikut adalah contoh pengunaan `Error Handling` pada `JavaScript` yang bisa digunakan dan berikut adalah contoh pengunaanya.
 
-* `Try`: adalah sebuah method yang biasa digunakan untuk menangkap sebuah pesan error dari sebuah nilai yang kita tentukan.
+* `Try` adalah sebuah method yang biasa digunakan untuk menangkap sebuah pesan error dari sebuah nilai yang kita tentukan.
 
-* `Catch`: adalah sebuah method yang biasa digunakan untuk menerima pesan error yang dikirim dari block try.
+* `Catch` adalah sebuah method yang biasa digunakan untuk menerima pesan error yang dikirim dari block try.
 
-* `Throw`: adalah sebuah method yang biasa digunakan untuk melempar sebuah pesan error dan pesannya bisa kita custom sesuai kengininan.
+* `Throw` adalah sebuah method yang biasa digunakan untuk melempar sebuah pesan error dan pesannya bisa kita custom sesuai kengininan.
 
 * `Finally` adalah sebuah method yang biasa digunakan untuk memberi sebuah pesan akhir bawah sebuah nilai telah berhasil di eksekusi baik itu true atau false.
 
