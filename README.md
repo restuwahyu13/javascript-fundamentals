@@ -2,7 +2,7 @@
 
 ## Javascript  Tutorial Basic  to advanced
 
-`Tutorial` ini saya buat dengan apa adanya dibuat berdasarkan sumber - sumber yang pernah saya pelajari sebelumnya di `W3schools`, `Dev Firefox`, `Javascript.info`, `Javatpoint`, `Udemy` dan yang lainnya, apabila ada penafsiran kata yang kurang jelas, mohon dimaklumi atau anda bisa membantu dengan ikut berpartisipasi dengan cara `commit`, semoga dengan adanya tutorial ini khususnya bagi anda yang baru belajar `JavaScript` bisa langsung memahami basic fundamentals dari JavaScript tersebut agar bisa melanjutkan ketahap selanjutnya. Terimakasih
+`Tutorial` ini saya buat dengan apa adanya dibuat berdasarkan sumber - sumber yang pernah saya pelajari sebelumnya di `W3schools`, `Dev Firefox`, `Javascript.info`, `Javatpoint`, `Udemy` dan yang lainnya, apabila ada penafsiran kata yang kurang jelas, mohon dimaklumi atau anda bisa membantu dengan ikut berpartisipasi dengan cara memberikan masukan dan saran, semoga dengan adanya tutorial ini khususnya bagi anda yang baru belajar `JavaScript` bisa langsung memahami basic fundamentals dari `JavaScript` tersebut agar bisa melanjutkan ketahap selanjutnya. Terimakasih
 
 #### *Berikut adalah tutorial JavaScript Basic to Advanced*
 
