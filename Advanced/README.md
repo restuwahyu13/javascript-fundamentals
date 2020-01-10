@@ -13,6 +13,7 @@ class Person {
   age = 23
   
 }
+
 console.log(Person.name);
 ```
 
@@ -34,6 +35,7 @@ class Person {
 }
 
 const data = new Person('John Doe',23);
+
 console.log(data.name);
 ```
 
@@ -74,6 +76,7 @@ class Person {
 }
 
 const data = new Person('John Doe',23);
+
 console.log(data.resultThree().name);
 ````
 
@@ -96,6 +99,7 @@ class Person {
 }
 
 const data = Person.resultData('John Doe',23);
+
 console.log(data.name);
 ````
 
@@ -137,12 +141,13 @@ class Address extends Person {
 }
 
 const data = new Address('John Doe','23','jl.kpbaru',14336,'depok','jawa barat');
+
 console.log(data);
 ```
 
 ### 3.CALLBACK
 
-`Callback` adalah sebuah metode untuk melakukan sebuah panggilan balik dari sebuah function, berikut adalah contoh pengunaan `Callback` pada `JavaScript` yang bisa digunakan dan berikut adalah contoh pengunaanya.
+`Callback` adalah sebuah metode untuk melakukan sebuah panggilan balik dari sebuah `Function`, berikut adalah contoh pengunaan `Callback` pada `JavaScript` yang bisa digunakan dan berikut adalah contoh pengunaanya.
 
 **REGULER CALLBACK**
 
@@ -191,7 +196,7 @@ parsingData(10,(x) => {
 
 ### 4.PROMISE
 
-`Promise` adalah sebuah metode yang digunakan untuk menangani operasi `Asyncronus` dalam JavaScript, mereka mudah digunakan ketika berhadapan dengan beberapa operasi `Asyncronus` dimana panggilan balik dapat membuat panggilan balik yang mengarah ke kode yang tidak dapat dieksekusi, berikut adalah contoh pengunaan `Promise` pada `JavaScript` yang bisa digunakan dan berikut adalah contoh pengunaanya.
+`Promise` adalah sebuah metode yang digunakan untuk menangani operasi `Asyncronus` dalam `JavaScript`, mereka mudah digunakan ketika berhadapan dengan beberapa operasi `Asyncronus` dimana panggilan balik dapat membuat panggilan balik yang mengarah ke kode yang tidak dapat dieksekusi, berikut adalah contoh pengunaan `Promise` pada `JavaScript` yang bisa digunakan dan berikut adalah contoh pengunaanya.
 
 
 ```javascript
@@ -217,6 +222,450 @@ new Promise((resolve, reject) => {
 .catch((err) => {
   
     reject(new Error(err));
+});
+```
+**PROMISE SPECIAL METHOD**
+
+* `Promise Resolve` adalah sebuah metode yang digunakan untuk menangani sebuah tugas `Asyncronus` untuk mengembalikan sebuah nilai
+jika nilai tersebut memenuhi keriteria yaitu sebagai `Array`, `Array Object` dan `Object` akan menolak jika nilai tersebut tidak memenuhi keriteria.
+
+* `Promise Reject` adalah sebuah metode yang digunakan untuk menghentikan sebuah tugas dalam bentuk `Asyncronus` dengan sebuah pesan yang diberikan.
+
+* `Promise All` adalah sebuah metode yang digunakan untuk menangani sebuah tugas `Asyncronus` untuk mengembalikan sebuah nilai secara serentak, jika nilai tersebut memenuhi keriteria yaitu sebagai `Array` atau `Array Object` dan aka menolak jika nilai tersebut tidak memenuhi keriteria.
+
+* `Promise Race` adalah sebuah metode yang digunakan untuk menangani tugas `Asyncronus` untuk mengembalikan sebuah nilai yang hanya
+memenuhi keriteria saja, dalam contoh kasus jika kita mempunyai sebuah 3 data masing - masing data memeliki waktu yang berbeda, maka waktu yang hanya memenuhi keriteria saja yang akan dieksekusi yaitu yang tercepat.
+
+
+**SINGLE PROMISE RESOLVE**
+
+```javascript
+// single promise resolve cara kesatu
+const person = {
+  
+  name: 'John Doe',
+  age: 25,
+  fak: 'Tehnik Informatika'
+  
+};
+
+const result = Promise.resolve(person);
+
+console.log(result);
+
+
+// single promise resolve cara kedua
+const person = ['senin','selasa','rabu','kamis','jumat','sabtu','minggu'];
+
+const result = Promise.resolve(person);
+
+console.log(result);
+
+
+// single promise resolve cara ketiga
+const person = [{
+  
+  name: 'John Doe',
+  age: 25,
+  fak: 'Tehnik Informatika'
+  
+}];
+
+const result = Promise.resolve(person);
+
+console.log(result);
+````
+**MULTIPLE PROMISE RESOLVE**
+
+```javascript
+// multiple promise resolve cara kesatu
+const personOne = [{
+  
+  name: 'John Doe',
+  age: 25,
+  fak: 'Tehnik Informatika'
+  
+}];
+
+const personTwo = [{
+  
+  name: 'Jane Doe',
+  age: 23,
+  fak: 'Tehnik Informatika'
+  
+}];
+
+const personThree = [{
+
+    name: 'Mr x',
+    age: 33,
+    fak: 'Tehnik Industri'
+  }
+];
+
+const result = Promise.resolve([personOne, personTwo, personThree]);
+
+console.log(result);
+
+
+//mutiple promise resolve with callback cara kedua
+const dataOne = new Promise((resolve, reject) => {
+
+  const personOne = {
+  
+    name: 'John Doe',
+    age: 25,
+    fak: 'Tehnik Informatika'
+  };
+
+    setTimeout(() => resolve(personOne), 1000);
+});
+
+
+const dataTwo = new Promise((resolve, reject) => {
+
+    const personTwo = {
+    
+      name: 'Jane Doe',
+      age: 23,
+      fak: 'Tehnik Informatika'
+  };
+
+    setTimeout(() => resolve(personTwo), 2000);
+});
+
+
+const dataThree = new Promise((resolve, reject) => {
+
+    const personThree = {
+      
+        name: 'Mr x',
+        age: 33,
+        fak: 'Tehnik Industri'
+    };
+
+    setTimeout(() => resolve(personThree), 3000);
+});
+
+
+Promise.resolve([dataOne, dataTwo, dataThree])
+.then(result => {
+
+   console.log(result);
+
+})
+.catch(err => {
+
+    Promise.reject(err);
+});
+````
+
+**SINGLE PROMISE REJECTED**
+
+```javascript
+//single promise reject
+const person = new Promise((resolve, reject) => {
+
+    const personTwo = {
+    
+      name: 'Jane Doe',
+      age: 23,
+      fak: 'Tehnik Informatika'
+  };
+
+    setTimeout(() => resolve(personTwo), 1000);
+});
+
+
+Promise.reject(person);
+````
+
+**MULTIPLE PROMISE REJECTED**
+
+```javascript
+//multipe promise reject
+const dataTwo = new Promise((resolve, reject) => {
+
+    const personTwo = {
+    
+      name: 'Jane Doe',
+      age: 23,
+      fak: 'Tehnik Informatika'
+  };
+
+    setTimeout(() => resolve(personTwo), 1000);
+});
+
+
+const dataThree = new Promise((resolve, reject) => {
+
+    const personThree = {
+      
+        name: 'Mr x',
+        age: 33,
+        fak: 'Tehnik Industri'
+    };
+
+    setTimeout(() => resolve(personThree), 3000);
+});
+
+
+Promise.reject([dataTwo, dataThree]);
+````
+
+**PROMISE REJECTED IN RACE OR ALL**
+
+```javascript
+//promise reject with promise race or all
+const dataOne = new Promise((resolve, reject) => {
+
+  const personOne = {
+  
+    name: 'John Doe',
+    age: 25,
+    fak: 'Tehnik Informatika'
+  };
+
+    setTimeout(() => reject(personOne), 2000);
+});
+
+
+const dataTwo = new Promise((resolve, reject) => {
+
+    const personTwo = {
+    
+      name: 'Jane Doe',
+      age: 23,
+      fak: 'Tehnik Informatika'
+  };
+
+    setTimeout(() => resolve(personTwo), 1000);
+});
+
+
+const dataThree = new Promise((resolve, reject) => {
+
+    const personThree = {
+      
+        name: 'Mr x',
+        age: 33,
+        fak: 'Tehnik Industri'
+    };
+
+    setTimeout(() => resolve(personThree), 3000);
+});
+
+
+Promise.race([dataOne, dataTwo, dataThree])
+.then(result => {
+
+   console.log(result);
+
+})
+.catch(err => {
+
+    Promise.reject(err);
+})
+````
+
+**SINGLE PROMISE ALL**
+
+```javascript
+// single promise all cara kesatu
+const person = ['senin','selasa','rabu','kamis','jumat','sabut','minggu'];
+
+const result = Promise.all(person);
+console.log(result);
+
+
+// single promise all cara kedua
+const person = [{
+  
+  name: 'John Doe',
+  age: 25,
+  fak: 'Tehnik Informatika'
+  
+}];
+
+const result = Promise.all(person);
+
+console.log(result);
+````
+
+**MULTIPLE PROMISE ALL**
+
+```javascript
+// multiple promise all cara kesatu
+const personOne = [{
+  
+  name: 'John Doe',
+  age: 25,
+  fak: 'Tehnik Informatika'
+  
+}];
+
+const personTwo = [{
+  
+  name: 'Jane Doe',
+  age: 23,
+  fak: 'Tehnik Informatika'
+  
+}];
+
+const personThree = [{
+
+    name: 'Mr x',
+    age: 33,
+    fak: 'Tehnik Industri'
+  }
+];
+
+const result = Promise.all([personOne, personTwo, personThree]);
+
+console.log(result);
+
+
+//mutiple promise all with callback cara kedua
+const personOne = [{
+  
+  name: 'John Doe',
+  age: 25,
+  fak: 'Tehnik Informatika'
+  
+}];
+
+const personTwo = [{
+  
+  name: 'Jane Doe',
+  age: 23,
+  fak: 'Tehnik Informatika'
+  
+}];
+
+const personThree = [{
+  
+    name: 'Mr x',
+    age: 33,
+    fak: 'Tehnik Industri'
+  }
+]
+
+Promise.all([personOne, personTwo, personThree])
+.then(result => {
+  
+   console.log(result);
+})
+.catch(err => {
+  
+    Promise.reject(err);
+  
+});
+
+
+// mutiple promise all with callback cara ketiga
+const dataOne = new Promise((resolve, reject) => {
+
+  const personOne = {
+  
+    name: 'John Doe',
+    age: 25,
+    fak: 'Tehnik Informatika'
+  };
+
+    setTimeout(() => resolve(personOne), 500);
+});
+
+
+const dataTwo = new Promise((resolve, reject) => {
+
+    const personTwo = {
+    
+      name: 'Jane Doe',
+      age: 23,
+      fak: 'Tehnik Informatika'
+  };
+
+    setTimeout(() => resolve(personTwo), 2000);
+});
+
+
+const dataThree = new Promise((resolve, reject) => {
+
+    const personThree = {
+      
+        name: 'Mr x',
+        age: 33,
+        fak: 'Tehnik Industri'
+    };
+
+    setTimeout(() => resolve(personThree), 3000);
+});
+
+
+Promise.race([dataOne, dataTwo, dataThree])
+.then(result => {
+
+   console.log(result);
+
+})
+.catch(err => {
+
+    Promise.reject(err);
+});
+````
+
+**PROMISE RACE**
+
+```javascript
+// multiple promise race with callback
+const dataOne = new Promise((resolve, reject) => {
+
+  const personOne = {
+  
+    name: 'John Doe',
+    age: 25,
+    fak: 'Tehnik Informatika'
+  };
+
+    setTimeout(() => resolve(personOne), 2000);
+});
+
+
+const dataTwo = new Promise((resolve, reject) => {
+
+    const personTwo = {
+    
+      name: 'Jane Doe',
+      age: 23,
+      fak: 'Tehnik Informatika'
+  };
+
+    setTimeout(() => resolve(personTwo), 1000);
+});
+
+
+const dataThree = new Promise((resolve, reject) => {
+
+    const personThree = {
+      
+        name: 'Mr x',
+        age: 33,
+        fak: 'Tehnik Industri'
+    };
+
+    setTimeout(() => resolve(personThree), 3000);
+});
+
+
+Promise.race([dataOne, dataTwo, dataThree])
+.then(result => {
+
+   console.log(result);
+
+})
+.catch(err => {
+
+    Promise.reject(err);
 });
 ```
 
@@ -248,7 +697,7 @@ const mahasiswa = [{
 }];
 
 
-mahasiswa.map((value, index) => {
+mahasiswa.map((value, index, array) => {
   
     console.log(value);
 });
@@ -276,7 +725,7 @@ const mahasiswa = [{
   
 }];
 
-mahasiswa.forEach((value, index) => {
+mahasiswa.forEach((value, index, array) => {
   
     console.log(value);
 });
@@ -346,6 +795,7 @@ mahasiswa.reduce((x, y) => {
 
 ```javascript
 const days = ['senin','selasa','rabu'];
+
 console.log(days[0]);
 ```
 
@@ -363,13 +813,15 @@ console.log(selasa);
 ```javascript
 const person = {
   
-   name: 'Restu Wahyu Saputra',
+   name: 'John Doe',
    age: 23,
    alamat: 'Jl.program V',
    kota: 'Depok',
    prov: 'Jawa Barat'
 }
-console.log(`Nama Saya: ${person.name}\n Umur Saya: ${person.age}\n Alamat: ${person.alamat}\n Kota: ${person.kota}\n Provinsi ${person.prov}`);
+const result = `Nama Saya: ${person.name}\n Umur Saya: ${person.age}\n Alamat: ${person.alamat}\n Kota: ${person.kota}\n Provinsi ${person.prov}`;
+
+console.log(result);
 ````
 
 **OBJECT WITH DESTRUCTURING**
@@ -377,7 +829,7 @@ console.log(`Nama Saya: ${person.name}\n Umur Saya: ${person.age}\n Alamat: ${pe
 ```javascript
 const person = {
   
-   name: 'Restu Wahyu Saputra',
+   name: 'John Doe',
    age: 23,
    alamat: 'Jl.program V',
    kota: 'Depok',
@@ -385,7 +837,10 @@ const person = {
 }
 
 const {name, age, alamat, kota, prov} = person;
-console.log(`Nama Saya: ${name}\n Umur Saya: ${age}\n Alamat: ${alamat}\n Kota: ${kota}\n Provinsi ${prov}`);
+
+const result = `Nama Saya: ${name}\n Umur Saya: ${age}\n Alamat: ${alamat}\n Kota: ${kota}\n Provinsi ${prov}`;
+
+console.log(result);
 ````
 
 ### 7.TEMPLATE STRING
@@ -393,7 +848,7 @@ console.log(`Nama Saya: ${name}\n Umur Saya: ${age}\n Alamat: ${alamat}\n Kota: 
 `Template Literal` adalah sebuah metode yang digunakan untuk membuat `Literal String`, yang memungkinkan anda dapat menambahkan sebuah ekspresi didalam sebuah string, berikut adalah contoh pengunaan `Template Literal` pada `JavaScript` yang bisa digunakan dan berikut adalah contoh pengunaanya.
 
 ```javascript
-const hello = 'Hello Wordl';
+const hello = 'John Doe';
 
 console.log(`Selamat Datang: ${hello}`);
 ```
@@ -501,7 +956,7 @@ berikut adalah contoh pengunaan `Http Request` pada `JavaScript` yang bisa digun
 **REGULER HTTP REQUEST**
 
 ```javascript
-// cara ke satu 
+// cara kesatu 
 const ajax = new XMLHttpRequest;
 
 ajax.onreadystatechange = () => {
@@ -519,7 +974,7 @@ ajax.open('GET', url, true);
 ajax.send();
 
 
-// cara ke dua
+// cara kedua
 const headers = new Headers({
   
     method: 'GET',
@@ -541,7 +996,7 @@ ajax.open(headers.get('method'), headers.get('url'));
 ajax.send();
 ```
 
-**PROMOISE HTTP REQUEST**
+**PROMISE HTTP REQUEST**
 
 ```javascript
 const url = 'https://jsonplaceholder.typicode.com/users'
@@ -579,13 +1034,13 @@ $(() => {
 
 `Error Handling` adalah sebuah metode yang biasa digunakan untuk menangkap sebuah error dari nilai yang kita tentukan, yang paling umum error handling digunakan ketika kita ingin melakukan request data mengunakan HTTP Request untuk menangkap sebuah error, berikut adalah contoh pengunaan `Erro Handling` pada `JavaScript` yang bisa digunakan dan berikut adalah contoh pengunaanya.
 
-`Try`: adalah sebuah method yang biasa digunakan untuk menangkap sebuah pesan error dari sebuah nilai yang kita tentukan.
+* `Try`: adalah sebuah method yang biasa digunakan untuk menangkap sebuah pesan error dari sebuah nilai yang kita tentukan.
 
-`Catch`: adalah sebuah method yang biasa digunakan untuk menerima pesan error yang dikirim dari block try.
+* `Catch`: adalah sebuah method yang biasa digunakan untuk menerima pesan error yang dikirim dari block try.
 
-`Throw`: adalah sebuah method yang biasa digunakan untuk melempar sebuah pesan error dan pesannya bisa kita custom sesuai kengininan.
+* `Throw`: adalah sebuah method yang biasa digunakan untuk melempar sebuah pesan error dan pesannya bisa kita custom sesuai kengininan.
 
-`Finally` adalah sebuah method yang biasa digunakan untuk memberi sebuah pesan akhir bawah sebuah nilai telah berhasil di eksekusi baik itu true atau false.
+* `Finally` adalah sebuah method yang biasa digunakan untuk memberi sebuah pesan akhir bawah sebuah nilai telah berhasil di eksekusi baik itu true atau false.
 
 ```javascript
 try {

@@ -30,6 +30,7 @@ function varData() {
 }
 
 var result = `Nama: ${name}\nUmur: ${age}\nFakultas: ${varData()}`;
+
 console.log(result);
 ```
 
@@ -61,6 +62,7 @@ function letData() {
 }
 
 let result = `Nama: ${name}\nUmur: ${age}\nFakultas: ${letData()}`;
+
 console.log(result);
 ```
 
@@ -92,11 +94,13 @@ function letData() {
 }
 
 const result = `Nama: ${name}\nUmur: ${age}\nFakultas: ${letData()}`;
+
 console.log(result);
 ```
 
-##### PENULISAN VARIABLE:
+##### PENULISAN VARIABLE
 
+**VAR**
 
 ```javascript
 var x = 10;
@@ -218,9 +222,13 @@ var b >= 4 // dimulai dari angka 4 (apakah B itu lebih besar sama dengan dari 4)
 ```javascript
 var a = 4;
 var b = 8
-//strict mode
+//strict mode one
 var tesOne = a === 4;
 var tesTwo = a !== 2;
+
+//strict mode two
+var tesOne = null === undefined;
+var tesTwo = null == undefined;
 
 //non strict mode
 var tesOne = a == 8;
@@ -228,11 +236,11 @@ var tesTwo = a != 8;
 ```
 **OPERATOR LOGIKA**
 
-`&& / END` : Jika operasi bilangan itu keduanya benar maka bernilai true dan jika salah satu bilangannya itu ada yang salah maka bernilai false
+* `&& / END` : Jika operasi bilangan itu keduanya benar maka bernilai true dan jika salah satu bilangannya itu ada yang salah maka bernilai false
 
-`|| / OR`: Jika operasi bilangan itu keduanya true maka bernilai true dan jika salah satu bilangannya itu ada yang salah maka bernilai true
+* `|| / OR`: Jika operasi bilangan itu keduanya true maka bernilai true dan jika salah satu bilangannya itu ada yang salah maka bernilai true
 
-` ! / NOT` : Jika sebuah bilangan itu true maka akan menjadi false dan jika sebuah bilangan itu false maka akan menjadi true
+* ` ! / NOT` : Jika sebuah bilangan itu true maka akan menjadi false dan jika sebuah bilangan itu false maka akan menjadi true
 
 ```javascript
 const a = 50;
@@ -249,7 +257,7 @@ const b = !a === 100;
 
 ### 4.PERCABANGAN
 
-`percabangan` adalah suatu metode yang digunakan untuk menentukan sebuah kondisi pada sebuah nilai, baik itu dalam keadaan benar ataupun salah, berikut adalah contoh beberapa jenis percabangan (pengondisian) pada `JavaScript` yang bisa digunakan dan berikut adalah contoh pengunaanya.
+`percabangan` adalah sebuah metode yang digunakan untuk menentukan sebuah kondisi pada sebuah nilai, baik itu dalam keadaan benar ataupun salah, berikut adalah contoh beberapa jenis percabangan (pengondisian) pada `JavaScript` yang bisa digunakan dan berikut adalah contoh pengunaanya.
 
 **IF STATEMENT**
 
@@ -366,7 +374,7 @@ switch(alertbox) {
 
 ### 4.PERULANGAN
 
-`Perulangan` adalah suatu metode yang digunakan untuk mengulang sebuah nilai secara berulang - ulang, sesuai dengan ketentuan yang telah ditentukan, berikut adalah contoh pengunaan perulangan pada `JavaScript` yang bisa digunakan dan berikut adalah contoh pengunaanya.
+`Perulangan` adalah sebuah metode yang digunakan untuk mengulang sebuah nilai secara berulang - ulang, sesuai dengan ketentuan yang telah ditentukan, berikut adalah contoh pengunaan perulangan pada `JavaScript` yang bisa digunakan dan berikut adalah contoh pengunaanya.
 
 **PERULANGAN FOR**
 
@@ -389,6 +397,7 @@ let i = 0;
 while(i < days.length) {
   
   console.log(days[i]);
+
   i++;
 }
 ```
@@ -404,7 +413,7 @@ do{
   console.log(days[i]);
   i++;
   
-}while (i < days.length);
+} while (i < days.length);
 ```
 
 **PERULANGAN ARRAY ITERATOR**
@@ -511,13 +520,31 @@ person['fak'] = 'Tehnik Informatika'
 
 **OBJECT SPECIAL METHOD**
 
-`Object Create`: adalah sebuah method yang biasa digunakan untuk membuat sebuah Object baru dari Object yang sudah ada.
+* `Object Assign`: adalah sebuah method yang biasa digunakan untuk menambahkan sebuah Object baru dari Object yang sudah ada.
 
-`Object Keys`: adalah sebuah method yang biasa digunakan untuk mengambil keys dari Object yang sudah ada.
+* `Object Create`: adalah sebuah method yang biasa digunakan untuk membuat sebuah Object baru dari Object yang sudah ada.
 
-`Object Values`: adalah sebuah method yang biasa digunakan untuk mengambil sebuah value dari Object yang sudah ada.
+* `Object Keys`: adalah sebuah method yang biasa digunakan untuk mengambil semua keys dari Object yang sudah ada.
 
-`Object Entries`: adalah sebuah method yang biasa digunakan untuk membuat sebuah keys dan value menjadi sebuah nilai Array
+* `Object Values`: adalah sebuah method yang biasa digunakan untuk mengambil semua value dari Object yang sudah ada.
+
+* `Object Entries`: adalah sebuah method yang biasa digunakan untuk membuat sebuah keys dan value menjadi sebuah nilai Array
+
+
+**OBJECT ASSIGN**
+
+```javascript
+const person = {
+
+  name: 'Jonh Doe',
+  age: 23,
+  fak: 'Tehnik Informatika'
+}
+
+const result = Object.assign({prov: 'depok'}, person);
+
+console.log(result);
+````
 
 **OBJECT CREATE**
 
@@ -531,6 +558,7 @@ const person = {
 
 console.log(person);
 
+
 const newObject = Object.create(person);
 newObject.name = 'Adung';
 newObject.age = 25;
@@ -539,6 +567,7 @@ newObject.state = 'Jakarta';
 newObject.country = 'Indonesia';
 
 const result = newObject;
+
 console.log(result);
 ````
 
@@ -553,6 +582,7 @@ const person = {
 }
 
 const result = Object.keys(person);
+
 console.log(result);
 ````
 
@@ -566,7 +596,8 @@ const person = {
   fak: 'Tehnik Informatika'
 }
 
-const result = Object.values(person)
+const result = Object.values(person);
+
 console.log(result);
 ````
 
@@ -601,6 +632,7 @@ function allDaysReg() {
    }
   
 }
+
 //init function
 allDaysReg();
 ```
@@ -618,6 +650,7 @@ const allDaysExp = function() {
    }
 
 }
+
 //init function
 allDaysExp();
 ```
@@ -650,6 +683,7 @@ const allDaysArrw = () => {
    }
 
 }
+
 //init function
 allDaysArrw();
 ```
@@ -668,6 +702,7 @@ const allDaysAsync = async () => {
    }
 
 }
+
 //init function
 allDaysAsync();
 ```
@@ -683,6 +718,7 @@ function person(name, age, fak) {
 }
 
 const result = new person('John Doe',23,'Tehnik Informatika');
+
 console.log(result);
 ```
 
@@ -698,6 +734,7 @@ function parsingData (name, age) {
 }
 
 const result = parsingData('Jon Doe', 23);
+
 console.log(result);
 ```
 
@@ -721,11 +758,11 @@ const person = (name, age, fak) => {
 
 **FUNCTION SPECIAL METHOD**
 
-`Call`: adalah sebuah method yang biasa digunakan untuk mengambil sebuah function dari function lain.
+* `Call`: adalah sebuah method yang biasa digunakan untuk mengambil sebuah function dari function lain.
 
-`Apply`: adalah sebuah method yang biasa digunakan untuk bekerja dengan sebuah nilai Array.
+* `Apply`: adalah sebuah method yang biasa digunakan untuk bekerja dengan sebuah nilai `Array`.
 
-`Bind`: adalah sebuah method yang biasa digunakan untuk mengikat sebuah nilai dari nilai yang sudah ditentukan.
+* `Bind`: adalah sebuah method yang biasa digunakan untuk mengikat sebuah nilai dari nilai yang sudah ditentukan.
 
 **CALL**
 
@@ -755,6 +792,7 @@ function atm() {
   }
   
 }
+
 console.log(atm());
 ```
 
